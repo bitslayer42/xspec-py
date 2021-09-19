@@ -1,5 +1,6 @@
+# move out of util dir to run
 import math
-from sphereshape import points
+from spheredata import points
 
 listy = []
 for pix, p in enumerate(points):

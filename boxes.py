@@ -5,7 +5,9 @@ import random
 from matrix import matrix_multiplication
 from math import acos,atan2,sqrt,cos,sin
 fieldOfView = 0.63
-from spheredata import points,lines
+# from boxesdata import points,lines
+from boxesdata4 import points,lines
+# from twowalls import points,lines
 
 os.environ["SDL_VIDEO_CENTERED"]='1'  # Center window
 black, white, blue  = (0, 0, 0), (230, 230, 230), (0, 154, 255)
@@ -69,12 +71,12 @@ while run:
         rotated_2d = matrix_multiplication(rotation_z, rotated_2d)
         
         # project to 2d
-        projected_2d = getCameraCoords(rotated_2d[0][0],rotated_2d[1][0],rotated_2d[2][0]-1.5)
+        projected_2d = getCameraCoords(rotated_2d[0][0],rotated_2d[1][0],rotated_2d[2][0]-10)
         x = int(projected_2d[0] * scale) + scr_center[0]
         y = int(projected_2d[1] * scale) + scr_center[1]
 
         projected_points[index] = [x, y]
-        pygame.draw.circle(screen, black, (x, y), 5)
+        # pygame.draw.circle(screen, black, (x, y), 3)
         index += 1
     #draw edges       
     for line in lines:

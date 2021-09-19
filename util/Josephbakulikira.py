@@ -1,9 +1,8 @@
-# from https://github.com/Josephbakulikira/3D-perspective-projection-with-python-
+# based on https://github.com/Josephbakulikira/3D-perspective-projection-with-python-
 import pygame
 import os
 import math
 from matrix import matrix_multiplication
-# from icosphere import verticies
 
 os.environ["SDL_VIDEO_CENTERED"]='1'  # Center window
 black, white, blue  = (20, 20, 20), (230, 230, 230), (0, 154, 255)
